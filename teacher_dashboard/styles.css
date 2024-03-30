@@ -1,0 +1,44 @@
+.container {
+    width: 50%;
+    margin: 0 auto;
+  }
+  
+  label, input, select, button {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    padding: 10px;
+  }
+  
+  #quizResult, #student_data_view {
+    margin-top: 20px;
+  }
+  
+  .added_question, .added_stdata {
+    display: flex;
+    border: 1px solid #4f4f4f;
+    border-radius: 6px;
+    padding: 5px 12px;
+    margin: 15px 9px;
+    flex-direction: column;
+    background: #eaeaea;
+  }
+
+  .question_data, .stdata {
+    display: flex;
+    padding: 5px 5px;
+    flex-direction: row;
+  }
+
+  .question_data strong, .stdata strong {
+    display: flex;
+    align-items: center;
+  }
+
+  .add_to_db {
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 12px;
+  }

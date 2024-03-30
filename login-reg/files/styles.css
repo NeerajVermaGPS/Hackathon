@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+:root{
+    --colorA: #0032ba;
+    --txtclr: #8590AD;
+    --bfsize: 2rem;
+    --nfsize: 0.938rem;
+    --sfsize: 0.875rem;
+}
+
+*,::before,::after{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: var(--colorA);
+}
+h1{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.l-form{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.circlea,
+.circleb{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.circlea{
+    top: -7rem;
+    left: -3.5rem;
+    background: linear-gradient(180deg, var(--colorA) 0%, rgba(196,196,196,0) 100%);
+}
+.circleb{
+    bottom: -6rem;
+    right: -5.5rem;
+    background: linear-gradient(180deg, var(--colorA) 0%, rgba(196,196,196,0) 100%);
+    transform: rotate(180deg);
+}
+
+.form{
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+}
+.fcontent{
+    width: 290px;
+}
+.fimg{
+    display: none;
+}
+.ftitle{
+    font-size: var(--bfsize);
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+.fdiv{
+    position: relative;
+    display: grid;
+    grid-template-columns: 7% 93%;
+    margin-bottom: 2rem;
+    padding: .25rem 0;
+    border-bottom: 1px solid var(--txtclr);
+}
+
+.fdiv.focus{
+    border-bottom: 1px solid var(--colorA);
+}
+
+.ficon{
+    font-size: 1.5rem;
+    color: var(--txtclr);
+    transition: .3s;
+}
+
+.fdiv.focus .ficon{
+    color: var(--colorA);
+}
+
+.flabel{
+    display: block;
+    position: absolute;
+    left: .75rem;
+    top: .25rem;
+    font-size: var(--nfsize);
+    color: var(--txtclr);
+    transition: .3s;
+}
+
+.fdiv.focus .flabel{
+    top: -1.5rem;
+    font-size: .875rem;
+    color: var(--colorA);
+}
+
+.fdiv-input{
+    position: relative;
+}
+.finput{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    padding: .5rem .75rem;
+    font-size: 13px;
+    color: var(--colorA);
+    transition: .3s;
+}
+.fforgot{
+    display: block;
+    text-align: right;
+    margin-bottom: 2rem;
+    font-size: var(--nfsize);
+    color: var(--txtclr);
+    font-weight: 500;
+    transition: .5;
+}
+.alert-danger {
+    position: fixed;
+    bottom: 20px;
+    left: 30px;
+    opacity: 1;
+    transform: translateY(100px);
+    width: 200px;
+    background-color: rgb(207 58 58 / 33%);
+    border-radius: 4px;
+    border: 1px solid;
+    font-size: 13px;
+    padding: 15px;
+    text-align: center;
+    color: #a00a26;
+    transition: 0.4s;
+}
+.fforgot:hover{
+    color: var(--colorA);
+    transition: .5s;
+}
+.fbutton{
+    width: 100%;
+    padding: 1rem;
+    font-size: var(--nfsize);
+    outline: none;
+    border: none;
+    margin-bottom: 3rem;
+    background-color: var(--colorA);
+    color: #fff;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: .3s;
+}
+.fbutton:hover{
+    box-shadow: 0px 15px 36px rgba(0,0,0,.15);
+}
+
+.fsocial{
+    text-align: center;
+}
+.fsocial-text{
+    display: block;
+    font-size: var(--nfsize);
+    margin-bottom: 1rem;
+}
+.fsocial-icon{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    margin-right: 1rem;
+    padding: .5rem;
+    background-color: var(--txtclr);
+    color: #fff;
+    font-size: 1.25rem;
+    border-radius: 50%;
+}
+.fsocial-icon:hover{
+    background-color: var(--colorA);
+}
+
+@media screen and (min-width: 768px){
+    :root{
+        --bfsize: 2.5rem;
+        --nfsize: 1rem;
+    }  
+}
+
+@media screen and (min-width: 968px){
+    .circlea{
+        width: 400px;
+        height: 400px;
+        top: -11rem;
+        left: -6.5rem;
+    }
+    .circleb{
+        width: 300px;
+        height: 300px;
+        right: -6.5rem;
+    }
+
+    .form{
+        grid-template-columns: 1.5fr 1fr;
+        padding: 0 2rem;
+    }
+    .fcontent{
+        width: 320px;
+    }
+    .fimg{
+        display: block;
+        width: 430px;
+        justify-self: center;
+    }
+}
+

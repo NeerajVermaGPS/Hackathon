@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gemini Pro</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.3.1/styles/default.min.css">
+    <link rel="stylesheet" href="chat_style.css" />
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <div class="cb_container">
+      <div class="chat-container" id="chatContainer">
+      </div>
+      <div class="prompt-cont">
+        <form class="prompt">
+          <textarea id="promptInput" placeholder="Enter your prompt here..." rows="1" maxlength="2000" autofocus></textarea>
+          <div id="cb_submitButton"><img src="files/send.svg" alt="send"></div>
+        </form>
+      </div>
+    </div>
+    <aside id="informations" class="center"></aside>
+    <script type="module" src="gemini_txt.js"></script>
+    <script src="preprocessor.js"></script>
+  </body>
+</html>

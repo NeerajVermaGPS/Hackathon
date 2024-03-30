@@ -1,0 +1,275 @@
+body, html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--themeLight);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --themeColor: #120240;
+  --themeLight: #c6e4ff;
+  --themeSky: #bfe1ff;
+}
+
+main {
+  width: 100%;
+  overflow: hidden;
+  animation: fadein 2s;
+  height: calc(100% - 60px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+main section {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.main-container {
+  height: calc(100% - 200px);
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.textcont {
+  width: calc(60% - 40px);
+  padding: 20px 55px;
+}
+.imgcont {
+  width: 35%;
+}
+
+.gradtext {
+  background: -webkit-linear-gradient(60deg, #313dcf, var(--themeColor));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#wlcmhdr {
+  margin: 60px auto 0 auto;
+  height: auto;
+  padding: 20px 55px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.textcont h1 {
+  color: var(--themeColor);
+  font-size: 31px;
+  margin-bottom: 0px;
+  animation: slidein 1s;
+  text-align: left;
+}
+
+footer {
+  width: 100%;
+}
+
+.footer {
+  background: linear-gradient(#00519A, var(--themeColor));
+}
+
+
+@keyframes slidein {
+  from {
+    transform: translateY(-50px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.textcont p {
+  color: #605386;
+  font-size: 13px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: justify;
+  animation: fadein 2s;
+}
+
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.image-wrapper img {
+  width: 350px;
+  height: auto;
+}
+
+.btnctnr {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0 15px;
+  height: 40px;
+  font-weight: bold;
+  font-size: 13px;
+  width: fit-content;
+  cursor: pointer;
+  border: 2px solid var(--themeColor);
+  color: var(--themeColor);
+  margin: 0 20px 20px 0;
+  transition: 0.4s;
+}
+
+.btn:hover {
+  background-color: var(--themeColor);
+  color: var(--themeLight);
+}
+
+.btn img {
+  height: 22px;
+  margin-left: 6px;
+  margin-right: -4px;
+  transition: 0.4s;
+}
+
+.btn:hover img {
+  filter: hue-rotate(290deg) brightness(84.9) contrast(100) saturate(0.6);
+}
+
+#login-info {
+  height: 100%;
+}
+
+#wlcmhdr h2 {
+  border-radius: 13px;
+  font-size: 36px;
+  padding: 14px;
+  border: 1px solid #2b32b4;
+}
+footer {
+  color: white;
+}
+footer a {
+  color: white;
+}
+.footer {
+  flex-wrap: wrap;
+  padding: 20px 0;
+  align-items: start;
+  font-size: 13px;
+}
+.implinks {
+  display: flex;
+  flex-direction: column;
+}
+.implinks a {
+  transition: 0.5s;
+}
+.implinks a:hover {
+  transform: translateX(10px);
+}
+.implinks a::before {
+  content: ">";
+  font-family: Advent Pro;
+}
+.footer-full {
+  display: block;
+}
+.footer-small {
+  display: none;
+}
+.footer-row {
+  width: 30%;
+  min-width: 250px;
+  margin: 20px 0;
+  line-height: 25px;
+  justify-content: space-evenly;
+}
+.smbtn img {
+  height: 20px;
+  transition: 0.5s;
+}
+.smbtn a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  background: rgba(255,255,255,0.2);
+  transition: 0.5s;
+  margin: 0 5px;
+  border-radius: 5px;
+}
+.smbtn a:hover {
+    transform: scale(1.2);
+    background: white;
+}
+.smbtn a:hover img {
+    filter: invert(1);
+}
+
+.attribute img {
+  width: 150px;
+  filter: invert(1);
+  margin: 5px 0;
+  padding: 3px 10px 3px 13px;
+  border-radius: 29px;
+  background: rgba(0,0,0,0.1);
+  transition: 1s;
+}
+.attribute img:hover {
+  filter: invert(0);
+  transform: scale(1.1);
+  background: white;
+}
+@media only screen and (max-width: 675px) {
+  main {
+    flex-direction: column;
+    height: auto;
+  }
+  main:nth-child(odd){
+    flex-direction: column-reverse;
+  }
+  .btn {
+    margin-bottom: 20px;
+  }
+  .textcont, .imgcont {
+    width: 100%;
+  }
+  .textcont h1 {
+    font-size: 21px;
+  }
+  .textcont p {
+    font-size: 12px;
+  }
+  .image-wrapper img {
+    width: 220px;
+  }
+  .main-container {
+    height: auto;
+  }
+  #login-info {
+    height: auto;
+  }
+  #wlcmhdr h2 {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+  }
+  .footer-full {
+    display: none;
+  }
+  .footer-small {
+    display: block;
+  }
+}
